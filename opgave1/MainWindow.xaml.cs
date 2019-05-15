@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,19 +25,28 @@ namespace opgave1
             InitializeComponent();
         }
 
-        public void BtnBack_Click()
+        public void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            if (lbxAgents.SelectedIndex > 0)
+            {
+                lbxAgents.SelectedIndex = --lbxAgents.SelectedIndex;
+            }
         }
 
-        public void BtnForward_Click()
+        public void BtnForward_Click(object sender, RoutedEventArgs e)
         {
-
+            if (lbxAgents.SelectedIndex > lbxAgents.Items.Count - 1)
+            {
+                lbxAgents.SelectedIndex = ++lbxAgents.SelectedIndex;
+            }
         }
 
-        public void BtnAddNew_Click(object o, RoutedEventArgs e)
+        public void BtnAddNew_Click(object sender, RoutedEventArgs e)
         {
-
+            var vm = DataContext as MainWindowViewModel;
+            vm.AddNewAgent();
+            lbxAgents.SelectedIndex = lbxAgents.Items.Count - 1;
+            textBox1.Focus();
         }
 
 
