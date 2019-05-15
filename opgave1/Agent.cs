@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-//using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
+
 
 namespace opgave1
 {
-    //public class Agents : ObservableCollection<Agent> { }; // Just to reference it from xaml
-
-    //[Serializable]
     public class Agent
     {
         public string id;
