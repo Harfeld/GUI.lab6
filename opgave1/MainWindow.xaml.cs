@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,5 +25,22 @@ namespace opgave1
         {
             InitializeComponent();
         }
+
+        public void BtnBack_Click()
+        {
+
+        }
+
+        public void BtnForward_Click()
+        {
+
+        }
+
+        public void BtnAddNew_Click(object o, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }
